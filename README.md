@@ -1,4 +1,4 @@
-# HKA LaTeX Template for Group Projects
+# HKA LaTeX Template
 
 This repository contains a LaTeX template designed for group projects and theses at the **Hochschule Karlsruhe (University of Applied Sciences)**, specifically adapted for the Faculty of Mechanical Engineering and Mechatronics.
 
