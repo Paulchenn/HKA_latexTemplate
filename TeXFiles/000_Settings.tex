@@ -1,23 +1,19 @@
-\newcommand{\NameA}{Max Mustermann 1}
-\newcommand{\StudentIdA}{123451}
-\newcommand{\NameB}{Max Mustermann 2}
-\newcommand{\StudentIdB}{123452}
-\newcommand{\NameC}{Max Mustermann 3}
-\newcommand{\StudentIdC}{123453}
-\newcommand{\NameD}{Max Mustermann 4}
-\newcommand{\StudentIdD}{123454}
-\newcommand{\ThesisTitle}{Titel}
-\newcommand{\ThesisTitleShort}{Kurztitel}
-\newcommand{\ThesisSubtitle}{Untertitel}
+\newcommand{\NameA}{Max Mustermann, B. Eng}
+\newcommand{\StudentIdA}{muma1234 / Matrikelnr. 012345}
+\newcommand{\NameB}{Max Mustermann, B. Eng}
+\newcommand{\StudentIdB}{muma1234 / Matrikelnr. 012345}
+\newcommand{\NameC}{Max Mustermann, B. Eng}
+\newcommand{\StudentIdC}{muma1234 / Matrikelnr. 012345}
+\newcommand{\ThesisTitle}{Title}
+\newcommand{\ThesisTitleShort}{short title}
+\newcommand{\ThesisSubtitle}{subtitle}
 \newcommand{\Subject}{Subject}
-\newcommand{\Supervisor}{Donald Duck}
-\newcommand{\CoSupervisor}{Dagobert Duck}
-\newcommand{\CompSupervisor}{Trick Tick Track}
-\newcommand{\FacultyDE}{Fakultät für Maschinenbau und Mechatronik}
-\newcommand{\FacultyEN}{Faculty of Mechanical Engineering and Mechatronics}
+\newcommand{\Supervisor}{Prof.~Dr.-Ing. Max Mustermann}
+\newcommand{\CoSupervisor}{Prof.~Dr.-Ing. Max Mustermann}
+\newcommand{\Faculty}{Fakultät für Maschinenbau und Mechatronik}
 \newcommand{\University}{Hochschule Karlsruhe}
 \newcommand{\UniversityLocation}{Karlsruhe}
-\newcommand{\ThesisDeliveryDate}{25. Februar 2025}
+\newcommand{\ThesisDeliveryDate}{\today}
 \newcommand{\CompanyName}{NoCompanyInvolved}  % don't modify this line, if no company is involved
 
 %\renewcommand{\theenumi}{\textbf{(\alph*{enumi})}} % Setze die Aufzählung auf fett
@@ -34,6 +30,10 @@
 \newcommand{\VarPicWidthI}{0.2\textwidth}
 \newcommand{\VarPicWidthJ}{0.469\textwidth}
 \newcommand{\VarPicWidthK}{0.45\textwidth}
+
+\newcolumntype{X}{>{\raggedleft\arraybackslash}X} % zentriert
+\newcolumntype{Y}{>{\centering\arraybackslash}X} % zentriert
+\newcolumntype{Z}{>{\raggedright\arraybackslash}X} % linksbündig
 
 %\definecolor{blue40} {rgb}{0.0000, 0.3843, 0.6039}
 \definecolor{blue50} {rgb}{0.0000, 0.4824, 0.7529}
@@ -79,6 +79,32 @@
 \tikzstyle{vorangeganen} 	= [rectangle, rounded corners, text centered, draw=black, fill=blue55, fill opacity=0.1]
 \tikzstyle{hier} 			= [rectangle, rounded corners, text centered, draw=black]
 \tikzstyle{weiterführen} 	= [rectangle, rounded corners, text centered, draw=black, fill=green55, fill opacity=0.1]
+
+% For code
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{pythonstyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{HKA_MMTblue}, % Nutzung der HKA Farbe für Strings
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=Python
+}
+\lstset{style=pythonstyle}
 
 
 %%%%%%%%%%%%%%%%%%%%% FOR ENGLISH LANGUAGE THESIS: %%%%%%%%%%%%%%%%%%%%

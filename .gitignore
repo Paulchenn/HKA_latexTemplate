@@ -1,5 +1,5 @@
 
-TeXFiles/.DS_Store
+*.DS_Store
 *.aux
 *.auxlock
 *.bbl
@@ -14,3 +14,5 @@ TeXFiles/.DS_Store
 *.xml
 *.gz
 *.toc
+*.gls
+*.glo

@@ -56,17 +56,23 @@
 %%%%% integrate packages to be used %%%%%
 
 
+%% For ToDos
+%\usepackage{todonotes}
+
+
 %% Package Comments
 \usepackage{comment}
-\usepackage[colorinlistoftodos]{todonotes}
-\newcommand{\mycomment}[1]{\todo[inline,linecolor=green,backgroundcolor=yellow!25,bordercolor=green,caption={}]{todo: #1}}
+\usepackage[textwidth=3cm]{todonotes} %[colorinlistoftodos]
+\newcommand{\mycomment}[1]{\todo[inline,linecolor=red,backgroundcolor=yellow!25,bordercolor=green,caption={}]{?? TODO: #1}}
 
 
 %% Package Language support:
 \usepackage[utf8]{inputenc} % Set input encoding to UTF-8
 \usepackage[T1]{fontenc}    % Set font encoding to T1
 \usepackage[ngerman]{babel}
-\usepackage{csquotes}
+%\usepackage[german]{babel}
+\usepackage[autostyle]{csquotes}
+%\usepackage{csquotes}
 
 
 %% Package Multirow allows a box in a table to span multiple rows
@@ -89,6 +95,7 @@
 % to imitate Calibri:
 \renewcommand*\familydefault{\sfdefault} % Base font of the document is to be sans serif
 \usepackage{lipsum}
+\usepackage{listings}
 
 
 %% Embed graphics
@@ -105,8 +112,8 @@
 \pgfplotsset{plot coordinates/math parser=false}
 \usetikzlibrary{patterns,arrows,shapes,positioning,shadows,trees,calc,positioning,external}
 \usepackage{tikz}
-\tikzexternalize[prefix=Figures/tikzexternalize_cache/,optimize command away=\includepdf]
-%\tikzexternaldisable
+%\tikzexternalize[prefix=Figures/tikzexternalize_cache/,optimize command away=\includepdf]
+\tikzexternaldisable
 % https://golatex.de//wiki/%5cincludegraphics
 
 %% For tree diagrams
@@ -239,7 +246,7 @@
 \fancyhead[l]{\leftmark
 	%\makebox[0.3\textwidth]{\includegraphics[width=0.3\textwidth]{Figures/xxx.png}}
 }  
-\fancyhead[c]{\hspace*{0.15\textwidth}\rightmark}
+% \fancyhead[c]{\hspace*{0.15\textwidth}\rightmark}
 %\fancyhead[C]{\usebox\headbox}                        % Centered header
 \fancyhead[R]{
 %	\makebox[0.2\textwidth]{\raisebox{-1ex}{\hspace*{14ex}\includegraphics[width=0.1\textwidth]{Figures/png/HKA_Logo.png}}}
@@ -336,6 +343,8 @@
 	% Display page without headers and footers
 	%\renewcommand{\thepage}{\Roman{page}}
 	\pagestyle{plain} 
+
+	%\listoftodos[ToDo's]
 	
 
 	% The title page and, if applicable, the embargo notice are included here
@@ -384,12 +393,11 @@
 
 	\fancyfoot[R]{\thepage}  % Page number on
 	
-	\input{TeXFiles/010_Kurzfassung}
-	\input{TeXFiles/020_Einfuehrung}
-	\input{TeXFiles/030_StandDerTechnik}
-	\input{TeXFiles/040_EntwickelteMethode} 
-	\input{TeXFiles/041_EvaluationDerMethode}
-	\input{TeXFiles/042_Ergebnisse}
+	% \input{TeXFiles/010_Kurzfassung}
+	\input{TeXFiles/010_Einleitung}
+	\input{TeXFiles/020_chapter2}
+	\input{TeXFiles/030_chapter3}
+	\input{TeXFiles/040_chapter4}
 	\input{TeXFiles/100_Zusammenfassung}
 
 	\begin{appendix}
